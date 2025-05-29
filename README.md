@@ -2,6 +2,8 @@
 
 This is an example on how to generate a simple browser-fingerprint for your Web-Clients which you can use for traffic analysis.
 
+Test it: [fingerprint.oxl.app](https://fingerprint.oxl.app)
+
 **Be aware:**
 
 * As we have to set this fingerprint as cookie or request-header - the user could manually modify or replace it.
