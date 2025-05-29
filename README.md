@@ -22,6 +22,15 @@ You might want to combine it with server-side client-fingerprinting techniques l
 
 We utilize the OSS [thumbmarkjs](https://github.com/thumbmarkjs/thumbmarkjs) library.
 
+### Output
+
+**Linux Laptop Chromium 136.x** => `linux_chrome_1536x864_347e44db7f27cb8c236bec1ae84791ce`
+**Linux Laptop Chromium 136.x private tab** => `linux_chrome_1536x864_347e44db7f27cb8c236bec1ae84791ce`
+**Linux Laptop Firefox 128.x** => `linux_firefox_1536x864_957bc354b66b5f2def573500c8c0f466`
+**Linux Laptop Firefox 128.x private tab** => `linux_firefox_1536x864_957bc354b66b5f2def573500c8c0f466`
+
+### Minimal Code
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.umd.js"></script>
 <script>...</script>
@@ -44,8 +53,8 @@ ThumbmarkJS.includeComponent('size', screenSize);
  */
 function buildBrowserFingerprintKey(c) {
     k = [
-        c.system.platform.split(' ')[0],
-        c.system.browser.name,
+        c.system.platform.split(' ')[0].toLowerCase(),
+        c.system.browser.name.toLowerCase(),
         `${c.size.width}x${c.size.height}`,
     ];
     if (c.screen.is_touchscreen) {
