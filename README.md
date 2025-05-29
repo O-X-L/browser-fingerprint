@@ -24,6 +24,7 @@ You might want to combine it with **server-side client-fingerprinting** techniqu
 * [Mozilla - Browser Fingerpinting](https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting)
 * [github.com/niespodd](https://github.com/niespodd/browser-fingerprinting)
 * [TCP/OS Fingerpinting](https://incolumitas.com/2021/03/13/tcp-ip-fingerprinting-for-vpn-and-proxy-detection/)
+* [fingerprintjs](https://fingerprint.com/blog/browser-fingerprinting-techniques/)
 
 ----
 
