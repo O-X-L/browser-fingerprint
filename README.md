@@ -10,11 +10,20 @@ This is an example on how to generate a simple browser-fingerprint for your Web-
 
 You have to think of those facts when you are analyzing your request-logs.
 
-You might want to combine it with server-side client-fingerprinting techniques like JA4. See:
+----
+
+You might want to combine it with **server-side client-fingerprinting** techniques like JA4. See:
 
 * [O-X-L/haproxy-ja4](https://github.com/O-X-L/haproxy-ja4)
 * [O-X-L/haproxy-ja4h](https://github.com/O-X-L/haproxy-ja4h)
 * [O-X-L/haproxy-ja3n](https://github.com/O-X-L/haproxy-ja3n)
+
+**More information**:
+
+* [OXL Docs](https://docs.o-x-l.com/waf/2_fingerprinting.html)
+* [Mozilla - Browser Fingerpinting](https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting)
+* [github.com/niespodd](https://github.com/niespodd/browser-fingerprinting)
+* [TCP/OS Fingerpinting](https://incolumitas.com/2021/03/13/tcp-ip-fingerprinting-for-vpn-and-proxy-detection/)
 
 ----
 
@@ -22,12 +31,12 @@ You might want to combine it with server-side client-fingerprinting techniques l
 
 We utilize the OSS [thumbmarkjs](https://github.com/thumbmarkjs/thumbmarkjs) library.
 
-### Output
+### Result
 
-**Linux Laptop Chromium 136.x** => `linux_chrome_1536x864_347e44db7f27cb8c236bec1ae84791ce`
-**Linux Laptop Chromium 136.x private tab** => `linux_chrome_1536x864_347e44db7f27cb8c236bec1ae84791ce`
-**Linux Laptop Firefox 128.x** => `linux_firefox_1536x864_957bc354b66b5f2def573500c8c0f466`
-**Linux Laptop Firefox 128.x private tab** => `linux_firefox_1536x864_957bc354b66b5f2def573500c8c0f466`
+* **Linux Laptop Chromium 136.x** => `linux_chrome_1536x864_347e44db7f27cb8c236bec1ae84791ce`
+* **Linux Laptop Chromium 136.x private tab** => `linux_chrome_1536x864_347e44db7f27cb8c236bec1ae84791ce`
+* **Linux Laptop Firefox 128.x** => `linux_firefox_1536x864_957bc354b66b5f2def573500c8c0f466`
+* **Linux Laptop Firefox 128.x private tab** => `linux_firefox_1536x864_957bc354b66b5f2def573500c8c0f466`
 
 ### Minimal Code
 
