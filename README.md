@@ -64,7 +64,7 @@ ThumbmarkJS.includeComponent('size', screenSize);
  * @returns {string}
  */
 function buildBrowserFingerprintKey(c) {
-    k = [
+    const k = [
         c.system.platform.split(' ')[0].toLowerCase(),
         c.system.browser.name.toLowerCase(),
         `${c.size.width}x${c.size.height}`,
