@@ -15,8 +15,16 @@
     }
 
     function buildBrowserFingerprintKey(c: any) : string {
+        let s = c.system.platform.split(' ')[0].toLowerCase();
+
+        if (navigator.userAgent.match(/iPhone|iPad/i)) {
+            s = 'ios';
+        } else if (navigator.userAgent.includes('Android')) {
+            s = 'android';
+        }
+
         let k = [
-            c.system.platform.split(' ')[0].toLowerCase(),
+            s,
             c.system.browser.name.toLowerCase(),
             `${c.size.width}x${c.size.height}`,
         ];
