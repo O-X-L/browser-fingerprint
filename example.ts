@@ -11,7 +11,13 @@ setFingerprintOption('logging', false);
 setFingerprintOption('exclude', ['webgl', 'canvas', 'permissions', 'audio.sampleHash']);
 
 function screenSize() {
-  return Promise.resolve({width: screen.width, height: screen.height});
+    let [w, h] = [screen.width, screen.height];
+    // handle device rotation if mobile
+    if (navigator.maxTouchPoints > 0 && window.matchMedia("(orientation: landscape)").matches) {
+        w = screen.height;
+        h = screen.width;
+    }
+    return Promise.resolve({width: w, height: h});
 }
 includeFingerprintComponent('size', screenSize);
 

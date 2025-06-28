@@ -11,7 +11,13 @@
     let fp_details = $state('');
 
     function screenSize() {
-        return Promise.resolve({width: screen.width, height: screen.height});
+        let [w, h] = [screen.width, screen.height];
+        // handle device rotation if mobile
+        if (navigator.maxTouchPoints > 0 && window.matchMedia("(orientation: landscape)").matches) {
+            w = screen.height;
+            h = screen.width;
+        }
+        return Promise.resolve({width: w, height: h});
     }
 
     function buildBrowserFingerprintKey(c: any) : string {
